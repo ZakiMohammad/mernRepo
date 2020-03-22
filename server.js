@@ -18,8 +18,9 @@ mongoose.connect(
     useUnifiedTopology: true
   }
 );
-// zeu$reu$@011';';
 
+// zeu$reu$@011';';
+console.log(process.env);
 mongoose.connection.on("connected", () => {
   console.log("Mongoose is Connected");
 });
@@ -39,10 +40,16 @@ app.use(express.urlencoded({ extended: false }));
 //HTTP request Logger
 app.use(morgan("tiny"));
 app.use("/api", routes);
+console.log("Hello " + process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === "production") {
+  console.log("Hello " + process.env.NODE_ENV);
   app.use(express.static("./client/build"));
 }
+
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+// });
 
 app.listen(PORT, console.log(`Server Starting at ${PORT}`));
 
