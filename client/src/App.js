@@ -77,7 +77,7 @@ class App extends Component {
     console.log("State ", this.state);
     return (
       <div className="app">
-        <h2>Welcome To My React App</h2>
+        <h2>Welcome To My Beest React app ever</h2>
         <form onSubmit={this.submit}>
           <div className="form-input">
             <input
