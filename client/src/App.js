@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import header from "./component/header";
 
 import "./App.css";
 
@@ -77,6 +78,7 @@ class App extends Component {
     console.log("State ", this.state);
     return (
       <div className="app">
+        <header />
         <h2>Welcome To My Beest React app ever</h2>
         <form onSubmit={this.submit}>
           <div className="form-input">
