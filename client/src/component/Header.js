@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 
-class header extends Component {
+class Header extends Component {
   render() {
     return (
       <Fragment>
@@ -72,4 +72,4 @@ class header extends Component {
   }
 }
 
-export default header;
+export default Header;
